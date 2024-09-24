@@ -1,0 +1,11 @@
+<div *ngIf="book">
+    <h2>{{ book.title }}</h2>
+    <p>Author: {{ book.author }}</p>
+    <p>Genre: {{ book.genre }}</p>
+    <p>Price: {{ book.price }}</p>
+    <p>Published Date: {{ book.publishedDate }}</p>
+    <p>{{ book.description }}</p>
+    
+    <button (click)="addToCart(book)">Add to Cart</button>
+  </div>
+  

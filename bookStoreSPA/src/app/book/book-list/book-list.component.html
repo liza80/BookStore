@@ -1,0 +1,26 @@
+<div>
+    <h1>Book Store</h1>
+    <div>
+        <a routerlink="/cart" routerlinkactive="active" ariacurrentwhenactive="page" ng-reflect-router-link="/cart" href="/cart">
+            <button>Shopping Cart</button>
+        </a>
+        <!-- <a [routerLink]="['/cart'] routerLinkActive="active" ariaCurrentWhenActive="page""> -->
+            <!-- <button>Shopping Cart</button> -->
+        <!-- <a routerLink="/cart" routerLinkActive="active" ariaCurrentWhenActive="page">Shopping cart</a> -->
+    <!-- <button [routerLink]="['/cart']">Shopping cart</button> -->
+     </div>
+     <br/>
+    <input type="text" placeholder="Search books..." [(ngModel)]="searchTerm" />
+    <button (click)="searchBooks()">Search</button>
+  
+    <div class="book-list">
+      <div *ngFor="let book of books" class="book-item">
+        <h3>title: {{ book.title }}</h3>
+        <p>author: {{ book.author }}</p>
+        <p>price : {{ book.price  }}</p>
+        <p>genre : {{ book.genre  }}</p>
+        <button [routerLink]="['/book', book.id]">View Details </button>
+      </div>
+    </div>
+  </div>
+  
